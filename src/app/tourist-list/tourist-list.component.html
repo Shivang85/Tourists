@@ -1,0 +1,29 @@
+<div class="body" >
+    <h3>Tourist List</h3>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th colspan="2">Tourist Name</th>
+                <!-- <th>Last Name</th> -->
+                <th>Gender</th>
+                <th>Age</th>
+                <th>From Place</th>
+                <th>Places visit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let tourist of tourists">
+                <td>{{tourist.id}}</td>
+                <td colspan="2">{{tourist.fname}} {{tourist.lname}}</td>
+                <!-- <td>{{tourist.lname}}</td> -->
+                <td>{{tourist.gender}}</td>
+                <td>{{tourist.age}}</td>
+                <td>{{tourist.fPlace}}</td>
+                <td>{{tourist.visits}}</td>
+                <td><button class="btn btn-outline-light btn-floating m-1" class="button"(click)="deleteTourist(tourist.id)"><a href="http://localhost:4200/tourists">Delete</a></button></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>

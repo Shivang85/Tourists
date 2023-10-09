@@ -1,0 +1,68 @@
+<div class="body"> 
+    <div class="col-md-6 offset-md-4">
+    <h3>Register Tourist</h3>
+    <form #formName="ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Id</label>
+            <input  type="number" maxlength="4" class="form-control" id="id" [(ngModel)]="tourist.id"  name="id" required #id="ngModel" pattern="^([0-9]{1,4})"> 
+           <div >
+            <small *ngIf="id.invalid && id.touched"><span style="color: red;">Please enter your Id in numerics upto four characters only</span></small>
+           </div>
+           
+        </div>
+        <div class="form-group">
+            <label>First Name</label>
+            <input  type="text" maxlength="15" class="form-control" id="fname" [(ngModel)]="tourist.fname"  name="fname" required #fname="ngModel" pattern="[a-zA-Z][a-zA-Z]+"> 
+           <div >
+            <small *ngIf="fname.invalid && fname.touched"><span style="color: red;">Please enter your first name in characters upto 15 characters only</span></small>
+           </div>
+           
+        </div>
+        <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" maxlength="12" class="form-control" id="lname" [(ngModel)]="tourist.lname"  name="lname"  ngModel required #lname="ngModel" pattern="[a-zA-Z][a-zA-Z]+"> 
+            <div>
+                <small *ngIf="lname.invalid && lname.touched"><span style="color: red;">Please enter your last name in characters upto 12 characters only</span></small>
+               </div>
+        </div>
+        
+        <div class="form-group">
+            <div>
+                <div>Gender</div>
+                <input type="radio" value="Male" id="male"[(ngModel)]="tourist.gender" name="gender"  ngModel required #gender="ngModel" >Male
+                <input type="radio" value="Female" id="female"[(ngModel)]="tourist.gender" name="gender"  ngModel required #gender="ngModel" >Female      
+        </div>
+        
+        </div>
+        <div class="form-group">
+            <label>Age</label>
+            <input type="number" max="90" maxlength="2" class="form-control"  id="age"  [(ngModel)]="tourist.age"  name="age"  required #age="ngModel" pattern="^([0-9]{1,2})">
+            <div>
+                <small *ngIf="age.invalid && age.touched"><span style="color: red;">Enter age less than 90</span></small>
+            </div>
+        </div>
+    
+        <div class="form-group">
+            <label>From Place</label>
+            <input type="text"  class="form-control" id="fPlace" [(ngModel)]="tourist.fPlace"  name="fPlace"  required #fPlace="ngModel" pattern="[a-zA-Z][a-zA-Z]+">
+            <div>
+                <small *ngIf="fPlace.invalid && fPlace.touched"><span style="color: red;">Please input from-place</span></small>
+            </div>
+        </div>
+    
+        <div class="form-group">
+            <label>No. of Places Visit</label>
+            <input type="number" class="form-control" id="visits" [(ngModel)]="tourist.visits" required #visits="ngModel" name="visits" >
+            <div>
+                <small *ngIf="visits.invalid && visits.touched"><span style="color: red;">Please enter no. of visits </span></small>
+            </div>
+        </div>
+
+        <div class="mt-3" style="margin-bottom: 20px;">
+            <button [disabled]='formName.invalid' class="btn btn-warning" type="submit">Register</button>
+        </div>
+
+    </form>
+    </div >
+    
+    </div>

@@ -1,0 +1,72 @@
+<div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a routerLink="home" routerLinkActive="active" class="nav-link" ><h4>Home</h4></a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="create-tourist" routerLinkActive="active" class="nav-link"  ><h4>Register Tourist</h4></a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="tourists" routerLinkActive="active" class="nav-link" ><h4>View Tourist</h4></a>
+        </li>
+      </ul>  
+    </div>
+  </nav>
+</div>
+
+<div class="header">
+<h1 class="display-4"   ><i>{{title}}</i></h1>
+</div>
+<div class="container-fluid">
+  <router-outlet></router-outlet>
+</div>
+<div>
+  <footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-outline-light btn-floating m-1" href="http://facebook.com" role="button"
+          ><i class="fab fa-facebook-f"></i
+        >Facebook</a>
+  
+        <!-- Twitter -->
+        <a class="btn btn-outline-light btn-floating m-1" href="http://twitter.com"role="button"
+          ><i class="fab fa-twitter"></i
+        >Twitter</a>
+  
+        <!-- Google -->
+        <a class="btn btn-outline-light btn-floating m-1" href="http://google.com" role="button"
+          ><i class="fab fa-google"></i
+        >Google</a>
+  
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="http://instagram.com" role="button"
+          ><i class="fab fa-instagram"></i
+        >Instagram</a>
+  
+        <!-- Linkedin -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/shivang-singh-chauhan-991641177/" role="button"
+          ><i class="fab fa-linkedin-in"></i
+        >LinkedIn</a>
+  
+        <!-- Github -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/Shivang85" role="button"
+          ><i class="fab fa-github"></i
+        >Github</a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright:
+      <a class="text-white" href="http://localhost:4200/">Kashmirtourism.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+</div>
